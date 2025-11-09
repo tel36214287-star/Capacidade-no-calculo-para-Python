@@ -3,100 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capacidade no cálculo para Python</title>
+<title>Capacidade no Cálculo para Python</title>
 <style>
-body {
-    background-color: #0f1724;
-    color: #f8fafc;
-    font-family: Arial, sans-serif;
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #0f1724;
+    color: #e0e0e0;
+    display: flex;
+  }
+  nav {
+    width: 220px;
+    background: #111827;
     padding: 20px;
-}
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-header h1 {
-    font-size: 2.5rem;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  nav h2 {
     color: #10b981;
+    font-size: 18px;
     margin-bottom: 10px;
-}
-header p {
-    font-size: 1rem;
+  }
+  nav a {
     color: #94a3b8;
-}
-section {
-    margin-bottom: 40px;
-}
-section h2 {
-    font-size: 1.8rem;
-    color: #10b981;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #10b981;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-pre, code {
-    background-color: #0b1220;
-    color: #f8fafc;
-    padding: 10px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-a {
-    color: #10b981;
     text-decoration: none;
-}
-a:hover {
-    color: #3b82f6;
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #94a3b8;
-    margin-top: 50px;
-    color: #94a3b8;
-}
+    display: block;
+    margin-bottom: 8px;
+  }
+  nav a:hover {
+    color: #10b981;
+  }
+  main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  h1, h2, h3 {
+    color: #10b981;
+  }
+  pre {
+    background: #0b1220;
+    padding: 10px;
+    overflow-x: auto;
+  }
+  img {
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  section {
+    margin-bottom: 40px;
+  }
 </style>
 </head>
 <body>
 
-<header>
-    <h1>Capacidade no cálculo para Python</h1>
-    <p>Sequências de Fibonacci, transformadas de Fourier e simulação de ondas em Python</p>
-</header>
+<nav>
+  <h2>Menu</h2>
+  <a href="#fibonacci-10">Fibonacci: 10 primeiros termos</a>
+  <a href="#fibonacci-soma-88">Fibonacci até soma 88</a>
+  <a href="#derivada-fourier">Derivada via Fourier</a>
+  <a href="#onda-1d">Simulação de onda 1D</a>
+  <a href="#integracao">Derivada inversa / Integração</a>
+  <a href="#soma-ondas">Soma de ondas senoidais</a>
+</nav>
 
-<section>
-    <h2>Repositório GitHub</h2>
-    <p>Todo o código do projeto está disponível em:</p>
-    <p><a href="https://github.com/tel36214287-star/Capacidade-no-calculo-para-Python" target="_blank">GitHub: Capacidade no cálculo para Python</a></p>
-</section>
+<main>
+  <h1>Capacidade no Cálculo para Python</h1>
+  
+  <!-- Fibonacci 10 termos -->
+  <section id="fibonacci-10">
+    <h2>Fibonacci: 10 primeiros termos</h2>
+    <pre>
+fib = [0, 1] 
+for i in range(2, 10): 
+    fib.append(fib[i-1] + fib[i-2])
+print("Os 10 primeiros números de Fibonacci:", fib) 
+print("Soma dos 10 primeiros números:", sum(fib))
+    </pre>
+    <p><strong>Explicação:</strong> Gera os 10 primeiros termos da sequência de Fibonacci e calcula a soma cumulativa. Método iterativo evita recursão profunda.</p>
+    <img src="Publicar/1000009285.png" alt="Fibonacci 10 primeiros termos">
+  </section>
 
-<section>
-    <h2>Resumo do Projeto</h2>
-    <p>O projeto apresenta exemplos de cálculo e visualização em Python:</p>
-    <ul>
-        <li>Definição da sequência de Fibonacci e soma de termos até atingir valores específicos;</li>
-        <li>Plotagem da sequência (Plot.png, Plot1.png, Plot2.png) — links no repositório;</li>
-        <li>Simulação de ondas temporais e soma de múltiplas ondas senoidais (Plot final com 7 ondas).</li>
-    </ul>
-</section>
+  <!-- Fibonacci até soma 88 -->
+  <section id="fibonacci-soma-88">
+    <h2>Fibonacci até soma 88</h2>
+    <pre>
+fib = [0, 1]
+soma = sum(fib) 
+n = 1
+while soma < 88: 
+    n += 1 
+    fib.append(fib[n-1] + fib[n-2]) 
+    soma += fib[n]
+print("Sequência até atingir soma 88:", fib) 
+print("Soma:", soma) 
+print("Número de termos usados:", len(fib))
+    </pre>
+    <p><strong>Explicação:</strong> Gera Fibonacci incrementalmente até que a soma alcance ou ultrapasse 88. Demonstra manipulação de listas e controle de loop.</p>
+    <img src="Publicar/1000009285.png" alt="Fibonacci até soma 88">
+  </section>
 
-<section>
-    <h2>Links diretos dos plots</h2>
-    <ul>
-        <li><a href="https://github.com/tel36214287-star/Capacidade-no-calculo-para-Python/blob/main/Publicar/Plot.png" target="_blank">Plot.png</a></li>
-        <li><a href="https://github.com/tel36214287-star/Capacidade-no-calculo-para-Python/blob/main/Publicar/Plot1.png" target="_blank">Plot1.png</a></li>
-        <li><a href="https://github.com/tel36214287-star/Capacidade-no-calculo-para-Python/blob/main/Publicar/Plot2.png" target="_blank">Plot2.png</a></li>
-        <li><a href="https://github.com/tel36214287-star/Capacidade-no-calculo-para-Python/blob/main/Publicar/Plot3.png" target="_blank">Plot3.png (soma final de 7 ondas)</a></li>
-    </ul>
-</section>
+  <!-- Derivada via Fourier -->
+  <section id="derivada-fourier">
+    <h2>Derivada via Transformada de Fourier</h2>
+    <pre>
+import numpy as np
+import matplotlib.pyplot as plt
 
-<footer>
-    <p>&copy; 2025 Projeto Python - Desenvolvido por <a href="https://github.com/tel36214287-star" target="_blank">tel36214287-star</a></p>
-</footer>
+L = 10
+N = 1024
+x = np.linspace(0, L, N, endpoint=False)
+f = np.sin(2 * np.pi * x / L)
+
+f_hat = np.fft.fft(f)
+k = 2 * np.pi * np.fft.fftfreq(N, d=L/N)
+df_hat = 1j * k * f_hat
+df = np.fft.ifft(df_hat)
+
+df_analitica = (2 * np.pi / L) * np.cos(2 * np.pi * x / L)
+
+plt.plot(x, df.real, label="Derivada via Fourier")
+plt.plot(x, df_analitica, '--', label="Derivada analítica")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("df/dx")
+plt.title("Derivada espacial usando Transformada de Fourier")
+plt.show()
+    </pre>
+    <p><strong>Explicação:</strong> Calcula derivada espacial de função periódica usando FFT. Alta precisão em sinais discretos. Útil em PDEs e análise espectral.</p>
+    <img src="Publicar/1000009285.png" alt="Derivada via Fourier">
+  </section>
+
+  <!-- Simulação de onda 1D -->
+  <section id="onda-1d">
+    <h2>Simulação de onda 1D via Fourier</h2>
+    <pre>
+L = 10.0
+N = 256
+dx = L/N
+x = np.linspace(0, L, N, endpoint=False)
+c = 1.0
+dt = 0.01
+t_max = 5.0
+t_steps = int(t_max/dt)
+
+k = 2 * np.pi * np.fft.fftfreq(N, d=dx)
+
+u0 = np.exp(-50*(x-L/2)**2)
+u_hat = np.fft.fft(u0)
+u_hat_prev = u_hat.copy()
+    </pre>
+    <p><strong>Explicação:</strong> Simula propagação de onda 1D usando método espectral e esquema de segunda ordem. FFT permite derivadas espaciais precisas.</p>
+    <img src="Publicar/1000009288.png" alt="Simulação de onda 1D">
+  </section>
+
+  <!-- Derivada inversa -->
+  <section id="integracao">
+    <h2>Derivada inversa (Integração)</h2>
+    <pre>
+t = np.linspace(0, 5, 500)
+f = 6 * t
+
+F = np.cumsum(f) * (t[1]-t[0])
+F = F - F[0]
+
+plt.plot(t, f, label='f(t) = 6t')
+plt.plot(t, F, label='Derivada inversa de f(t)')
+plt.xlabel('t')
+plt.ylabel('Amplitude')
+plt.title('Derivada inversa (integração) de um sinal')
+plt.legend()
+plt.grid(True)
+plt.show()
+    </pre>
+    <p><strong>Explicação:</strong> Reconstrói função original a partir de sua derivada via soma cumulativa. Útil em sinais temporais e análise de dados experimentais.</p>
+    <img src="Publicar/1000009291.png" alt="Derivada inversa">
+  </section>
+
+  <!-- Soma de ondas -->
+  <section id="soma-ondas">
+    <h2>Soma de múltiplas ondas senoidais</h2>
+    <pre>
+t = np.linspace(0, 1, 1000)
+A = [1, 0.8, 0.6, 0.5, 0.4, 0.3, 0.2]
+f = [1, 2, 3, 4, 5, 6, 7]
+phi = [0, np.pi/6, np.pi/4, np.pi/3, 0, np.pi/2, np.pi/5]
+
+f_total = np.zeros_like(t)
+for n in range(7):
+    f_total += A[n] * np.sin(2 * np.pi * f[n] * t + phi[n])
+    if n == 0:
+        f_first = A[0] * np.sin(2 * np.pi * f[0] * t + phi[0])
+
+plt.plot(t, f_first, label="Primeira onda (n=1)", linestyle='--')
+plt.plot(t, f_total, label="Soma das 7 ondas", color='black')
+plt.title("Primeira onda vs soma de 7 ondas")
+plt.xlabel("t [s]")
+plt.ylabel("Amplitude")
+plt.legend()
+plt.grid(True)
+plt.show()
+    </pre>
+    <p><strong>Explicação:</strong> Demonstra superposição de ondas com diferentes amplitudes, frequências e fases. Analisa interferência construtiva e destrutiva.</p>
+    <img src="Publicar/1000009294.png" alt="Soma de ondas senoidais">
+  </section>
+
+</main>
 
 </body>
 </html>
