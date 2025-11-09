@@ -1,5 +1,6 @@
-# Capacidade de calculo para Python!
-#-----------------------------------------------------
+# Analise da capacidade de calculo para Python!
+
+
 # Definindo a sequência de Fibonacci
 fib = [0, 1]  # os dois primeiros números
 
