@@ -1,3 +1,6 @@
+https://tel36214287-star.github.io/Capacidade-no-calculo-para-Python/
+
+
 # Analise da capacidade de calculo para Python!
 
 
