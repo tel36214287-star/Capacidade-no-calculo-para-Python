@@ -1,5 +1,5 @@
 # Capacidade de calculo para Python!
------------------------------------------------------
+#-----------------------------------------------------
 # Definindo a sequência de Fibonacci
 fib = [0, 1]  # os dois primeiros números
 
@@ -10,7 +10,7 @@ for i in range(2, 10):
 print("Os 10 primeiros números de Fibonacci:", fib)
 print("Soma dos 10 primeiros números:", sum(fib))
 
-----------------------------------------------------
+#----------------------------------------------------
 
 # Lista inicial da sequência de Fibonacci
 fib = [0, 1]
@@ -28,7 +28,7 @@ print("Sequência até atingir soma 88:", fib)
 print("Soma:", soma)
 print("Número de termos usados:", len(fib))
 
--------------‐--------------------------------------
+#-------------‐--------------------------------------
 
 # Inicializa a sequência de Fibonacci
 fib = [0, 1]
@@ -47,8 +47,8 @@ print("Sequência até soma 88:", fib)
 print("Soma:", soma)
 print("Número de termos:", len(fib))
 
+#-------------‐--------------------------------------
 
--------------‐--------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -81,7 +81,7 @@ plt.show()
 ![1000009285](https://github.com/user-attachments/assets/e0a7dbe1-541c-4dd6-8fee-e63a9cdd5b54)
 
 
--------------‐--------------------------------------
+#-------------‐------------------------------------------------------------------
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -147,7 +147,8 @@ plt.show()
 
 ![1000009288](https://github.com/user-attachments/assets/697b676b-7627-438f-bcbb-062b1fe99e73)
 
--------------‐--------------------------------------
+#-------------‐--------------------------------------
+
 import numpy as np
 import matplotlib.pyplot as plt
 
