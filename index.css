@@ -1,0 +1,104 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #0f1724; /* fundo escuro */
+    color: #f8fafc;           /* texto claro */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #10b981; /* verde destaque */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1rem;
+    color: #94a3b8; /* cinza suave */
+}
+
+/* Seções de conteúdo */
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #10b981;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #10b981;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Blocos de código */
+pre, code {
+    background-color: #0b1220;
+    color: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Imagens / plots */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #10b981;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Links */
+a {
+    color: #10b981;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #3b82f6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #94a3b8;
+    margin-top: 50px;
+    color: #94a3b8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
